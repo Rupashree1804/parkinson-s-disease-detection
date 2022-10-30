@@ -24,3 +24,29 @@ Data Pre-Processing
 Separating the features & Target
 X = parkinsons_data.drop(columns=['name','status'], axis=1)
 Y = parkinsons_data['status']
+print(X)
+print(Y)
+Splitting the data to training data & Test data
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=2)
+print(X.shape, X_train.shape, X_test.shape)
+Data Standardization
+scaler = StandardScaler()
+scaler.fit(X_train)
+StandardScaler(copy=True, with_mean=True, with_std=True)
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+print(X_train)
+Model Training
+Support Vector Machine Model
+
+
+
+
+
+
+
+
+
+
+
+
