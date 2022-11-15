@@ -38,6 +38,15 @@ X_test = scaler.transform(X_test)
 print(X_train)
 Model Training
 Support Vector Machine Model
+model = svm.SVC(kernel='linear')
+# training the SVM model with training data
+model.fit(X_train, Y_train)
+Model Evaluation
+Accuracy Score
+# accuracy score on training data
+X_train_prediction = model.predict(X_train)
+training_data_accuracy = accuracy_score(Y_train, X_train_prediction)
+print('Accuracy score of training data : ', training_data_accuracy)
 
 
 
