@@ -47,6 +47,26 @@ Accuracy Score
 X_train_prediction = model.predict(X_train)
 training_data_accuracy = accuracy_score(Y_train, X_train_prediction)
 print('Accuracy score of training data : ', training_data_accuracy)
+# accuracy score on training data
+X_test_prediction = model.predict(X_test)
+test_data_accuracy = accuracy_score(Y_test, X_test_prediction)
+print('Accuracy score of test data : ', test_data_accuracy)
+Accuracy score of test data : 0.8717948717948718
+Building a Predictive System
+# changing input data to a numpy array
+input_data_as_numpy_array = np.asarray(input_data)
+
+# reshape the numpy array
+input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+
+# standardize the data
+std_data = scaler.transform(input_data_reshaped)
+if (prediction[0] == 0):
+  print("The Person does not have Parkinsons Disease")
+
+else:
+  print("The Person has Parkinsons")
+
 
 
 
